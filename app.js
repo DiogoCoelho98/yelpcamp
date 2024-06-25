@@ -70,7 +70,7 @@ passport.serializeUser(User.serializeUser()); //how the user is stored in the se
 passport.deserializeUser(User.deserializeUser()); //how to get the user out of the session
 
 passport.use(new GoogleStrategy({
-    callbackURL: 'http://localhost:3000/auth/google/callback',
+    callbackURL: 'https://yelpcamp-uf2n.onrender.com/auth/google/callback',  //http://localhost:3000
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     passReqToCallback: true,

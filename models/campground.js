@@ -34,7 +34,7 @@ const CampgroundSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'User' //User collection in MongoDB
     },
-    reviews: [
+    reviews: [      
         {
             type: Schema.Types.ObjectId, //to store the objectID of the different reviews (One to Many)
             ref: 'Review' //Connects to the review model - 'Review' collection's name
