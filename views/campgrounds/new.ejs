@@ -1,0 +1,62 @@
+<% layout('layouts/boilerplate') %>
+
+<link crossorigin="anonymous" rel="stylesheet" href="/stylesheets/new.css">
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="text-center mb-4">New Campground</h1>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8">
+            <form action="/campgrounds" method="post" novalidate class="validated-form" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label class="form-label" for="title">Title</label>
+                    <input class="form-control" type="text" id="title" name="campground[title]" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="location">Location</label>
+                    <input class="form-control" type="text" id="location" name="campground[location]" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="price">Price per Night</label>
+                    <div class="input-group">
+                        <span class="input-group-text" id="price-label">$</span>
+                        <input id="price" type="text" class="form-control" aria-label="price"
+                            aria-describedby="price-label" placeholder="0.00" name="campground[price]" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="description">Description</label>
+                    <textarea class="form-control" id="description" name="campground[description]" required></textarea>
+                </div>
+                <div class="input-group mb-3">
+                    <input type="file" class="form-control d-none" id="image" name="image" multiple>
+                    <input type="text" class="form-control" id="fileName" placeholder="No images chosen" readonly>
+                    <button class="btn btn-primary" type="button" id="browseButton">Browse</button>
+                </div>
+                <script>
+                    document.getElementById('browseButton').addEventListener('click', function () {
+                        document.getElementById('image').click();
+                    });
+
+                    document.getElementById('image').addEventListener('change', function () {
+                        const files = this.files;
+                        const fileNames = [];
+                        for (const file of files) {
+                            fileNames.push(file.name);
+                        }
+                        document.getElementById('fileName').value = fileNames.join(', ') || 'No image chosen';
+                    });
+                </script>
+                <div class="mb-3 text-center">
+                    <button class="btn btn-success">Add Campground</button>
+                </div>
+            </form>
+            <div class="campgrounds-container">
+                <a href="/campgrounds" class="btn btn-success btn-sm">Campgrounds</a>
+            </div>
+        </div>
+    </div>
+</div>

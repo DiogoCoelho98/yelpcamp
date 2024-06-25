@@ -1,0 +1,195 @@
+html, body {
+    height: 100%;
+}
+.loginContainer {
+margin-top: 8%;
+}
+body {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+    url("https://images.unsplash.com/photo-1533575770077-052fa2c609fc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+h1 {
+    color: rgba(255, 255, 255, 1);
+    margin: 20px 0;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 500;
+}
+.add-campground {
+    display: inline-block;
+    font-size: 1.3rem;
+    padding: 12px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 2rem;
+    border: 1px solid;
+    border-color: white;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease, border 0.3s ease; 
+
+}
+.add-campground:hover {
+    border: 1px solid transparent;
+}
+.card {
+    background-color: rgba(255, 255, 255, 0.2);
+    width: auto;
+    height: auto;
+    padding: 20px;
+    border-radius: 50px;
+}
+.card-title {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.5rem;
+}
+.card-text {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    line-height: 1.7
+}
+.card-location {
+    font-size: 0.8rem
+}
+.btn-primary {
+    font-size: 1.1rem;
+    margin-top: 20px;
+    font-weight: 700;
+    background-color: rgba(255,255,255,0.2) !important;
+    border-radius: 2rem;
+    border: 1px solid ;
+    display: block;
+    margin-left: auto;
+    width: fit-content;
+    transition: color 0.3s ease, border 0.3s ease; 
+    --bs-btn-active-border-color: rgba(255, 255, 255,0);
+}
+.btn-primary:hover {
+    border: 1px solid transparent;
+}
+.card-img {
+    max-width: fit-content;
+    max-height: 600px;
+    border-radius: 3rem;
+}
+.paginationjs {
+    align-items: center;
+    margin-top: 20px;
+}
+
+.paginationjs-pages {
+    display: flex;
+    flex-direction: column;
+}
+.paginationjs-pages ul {
+    display: flex;
+    list-style-type: none;
+}
+.paginationjs-page,
+.paginationjs-prev,
+.paginationjs-next {
+    margin: 5px 2px;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;    
+    text-align: center;
+    width: fit-content;
+    background-color: rgba(255,255,255,0.3);
+    color: white;
+    text-shadow: 0 0.05rem 0.1rem rgba(0,0,0,0.7);
+    text-decoration: none;
+    outline: none;
+}
+.paginationjs-page:hover,
+.paginationjs-prev:hover,
+.paginationjs-next:hover {
+    background-color: rgba(255,255,255,0.6);
+    color: white;
+}
+.paginationjs-page.active,
+.paginationjs-prev.active,
+.paginationjs-next.active {
+    background-color: rgba(255,255,255,0.6);
+    color: white;
+}
+.paginationjs-page a,
+.paginationjs-prev a,
+.paginationjs-next a {
+    text-decoration: none;
+    color: white;
+}
+.mapboxgl-popup {
+    max-width: 300px;
+    font-family: Arial, sans-serif;
+}
+
+.mapboxgl-popup-content {
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgba(255,255,255,0.6);
+}
+.mapboxgl-popup-content:hover {
+    background-color: rgba(255,255,255,0.65);
+}
+.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip{
+    border-top-color:rgba(255,255,255,0.6);
+    margin-bottom: 15px
+}
+.mapboxgl-popup-close-button {
+    display: none;
+}
+.mapboxgl-popup-content a {
+    color: white;
+    text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 1); 
+    text-decoration: none;
+    font-weight: 800;
+}
+.alert-success {
+    --bs-alert-bg: rgba(14, 227, 14, 0.4);
+    max-width: 28%;
+    margin-left: auto;  
+    margin-right: auto;
+    color: white;
+    border-radius: 15px;
+    font-weight: 400;
+    text-align: center;
+}
+.alert-danger {
+    --bs-alert-bg: rgba(243, 7, 7, 0.4);
+    max-width: 28%;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    border-radius: 15px;
+    font-weight: 400;
+    text-align: center;
+}
+@media(max-width: 780px) {
+    #map {
+        display: none;
+    }
+    .add-container {
+        text-align: center;
+    }
+    .row {
+        text-align: center;
+    }
+    .btn-primary {
+        margin-right: auto;
+    }
+    .paginationjs-pages {
+        align-items: center;
+    }
+}
+
+
+
+
+

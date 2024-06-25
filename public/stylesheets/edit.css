@@ -1,0 +1,126 @@
+html, body {
+    height: 100%;
+}
+body {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.01)),
+    url("https://images.unsplash.com/photo-1542338106-1b4bfe84d5df?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+h1 {
+    color: rgba(255, 255, 255, 1);
+    letter-spacing: 1px;
+}
+.form-label {
+    font-size: 1.25rem;
+    color: rgba(255,255,255,0.8);
+    font-weight: 600;
+    text-shadow: 0 0.05rem 0.1rem rgba(0,0,0,0.5);
+}
+.form-control {
+    background-color: rgba(255, 255, 255, 0.4) !important;
+    border-width: 1px;
+    color: rgba(255, 255, 255, 1) !important;
+    text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.9);
+    font-weight: 700;
+}
+.form-control:hover {
+    border: 1px solid transparent
+}
+#price::placeholder, #fileName::placeholder {
+    color: rgba(255, 255, 255, 1);
+}
+.btn-info {
+    font-size: 1.1rem;
+    color: white;
+    margin-top: 10px;
+    width: auto;
+    font-weight: 700;
+    background-color: rgba(255,255,255,0.2) !important;
+    border-radius: 2rem;
+    border: 1px solid;
+    --bs-btn-active-border-color: rgba(255, 255, 255,0);
+    --bs-btn-active-color: white;
+    padding-inline: 40px;
+
+}
+.btn-info:hover {
+    color: white;
+    border: 1px solid transparent;
+}
+.form-control:valid {
+    border-color: none !important;
+}
+.was-validated .form-control:invalid {
+    border-color: #ff0018 !important;
+}
+.btn-primary {
+    background-color: rgba(255,255,255,0.9);
+    color: black;
+    border-color: rgba(255,255,255,0.9);
+}
+h5 {
+    margin-top: 50px;
+    color: rgba(255, 255, 255, 1);
+    letter-spacing: 1px;
+    text-align: center;
+}
+.img-delete {
+    display: flex;
+    align-items: end;
+    max-width: 700px;
+    height: auto;
+    text-align: center;
+}
+.img-thumbnail {
+    height: 130px;
+    width: auto;
+    border: 2px solid transparent;
+    background-color: transparent;
+    border-radius: 30px;
+    padding: 0;
+}
+.img-thumbnail:hover {
+    border: 2px solid rgba(255,255,255,0.6);
+
+}
+.delete-radio {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.6);
+    font-weight: 600;
+    text-shadow: 0 0.05rem 0.1rem rgba(0,0,0,0.5);
+    letter-spacing: 0.5px;
+}
+.form-check-inline {
+    display:flex;
+    justify-content: center;
+    align-items: end;
+    margin-top: 15px
+}
+.form-check-label {
+    margin-left: 5px;
+}
+.form-check-input {
+    --bs-form-check-bg: none
+}
+.form-check-input:hover{
+    background-color: rgb(10, 201, 160);
+}
+.form-check-input:checked {
+    background-color: rgb(10, 201, 160);
+    border-color: rgb(10, 201, 160);
+}
+.update-container {
+    text-align: center;
+}
+.back-btn{
+    font-size: 0.9rem;
+    padding-inline: 10px;
+}
+@media (max-width: 960px) {
+    .back-btn-container {
+        text-align: center;
+    }
+}

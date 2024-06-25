@@ -1,0 +1,58 @@
+<% layout('layouts/boilerplate') %>
+<link crossorigin="anonymous" rel="stylesheet" href="/stylesheets/register.css">
+<link crossorigin="anonymous" href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+<div class="container loginContainer">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-lg-4 col-md-6 col-sm-8">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Register</h5>
+                    <form action="/register" method="post" class="validated-form" novalidate>
+                        <div class="mt-4 mb-3">
+                            <label class="form-label" for="username">Username</label>
+                            <input class="form-control" type="text" id="username" name="username" autofocus required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="email">Email</label>
+                            <input class="form-control" type="email" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="password">Password</label>
+                            <div class="input-group">
+                                <input class="form-control" type="password" id="password" name="password" required>
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                                        <i class="material-icons">visibility_off</i> <!-- Ensure this icon matches the one in your login form -->
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3 text-center">
+                            <button class="btn btn-success">Register</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script crossorigin="anonymous" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#togglePassword').click(function() {
+            const passwordField = $('#password');
+            const type = passwordField.attr('type') === 'password' ? 'text' : 'password';
+            passwordField.attr('type', type);
+            
+            const icon = $(this).find('i');
+            if (type === 'password') {
+                icon.text('visibility_off');
+            } else {
+                icon.text('visibility');
+            }
+        });
+    });
+</script>

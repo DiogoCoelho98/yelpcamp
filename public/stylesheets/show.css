@@ -1,0 +1,236 @@
+html, body {
+    height: 100%;
+}
+body {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.3)),
+    url("https://images.unsplash.com/photo-1564135624576-c5c88640f235?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: center;
+    text-shadow: 0 0.05rem 0.1rem rgba(0,0,0,0.5);
+    position: relative;
+    background-attachment: fixed;
+}
+h2 {
+    color: rgba(255, 255, 255, 1);
+    text-shadow: 0 0.05rem 0.1rem rgba(0,0,0,0.5);
+    letter-spacing: 1px;
+    margin-top: 30px;
+}
+.form-label {
+    font-size: 1.55rem;
+    color: rgba(255,255,255,1);
+    font-weight: 600;
+    text-shadow: 0 0.05rem 0.1rem rgba(0,0,0,0.4);
+    transition: color 0.3s ease, border 0.3s ease;
+}
+.form-control {
+    background-color: rgba(255, 255, 255, 0.3) !important;
+    border-width: 1px;
+    border-radius: 20px;
+    color: rgba(255, 255, 255, 1) !important;
+    text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.9);
+    font-weight: 700;
+    transition: color 0.3s ease, border 0.3s ease;
+}
+.form-control:hover {
+    border: 1px solid transparent
+}
+.btn-success {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    width:fit-content;
+    font-weight: 700;
+    background-color: rgba(255,255,255,0.3) !important;
+    border-radius: 2rem;
+    border: 1px solid;
+    padding-inline: 50px;
+    transition: color 0.3s ease, border 0.3s ease;
+    --bs-btn-active-border-color: #2ada07;
+}
+.btn-success:hover {
+    border: 1px solid transparent;
+}
+.form-control.is-valid, .was-validated .form-control:valid{
+    border-color: #2ada07 !important;
+}
+.form-control.is-invalid, .was-validated .form-control:invalid {
+    border-color: #e10a1f;
+}
+.card {
+    background-color: rgba(255, 255, 255, 0.3) !important;
+    border: 1px solid white;
+    border-radius: 30px;
+    transition: color 0.3s ease, border 0.3s ease;
+}
+.card:hover {
+    border: 1px solid transparent;
+}
+.card-footer {
+    border-top: none;
+}
+.card-title, .card-text {
+    color: rgba(255, 255, 255, 1) !important;
+    text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.9);
+}
+.btn-danger {
+    font-size: 0.8rem;
+    margin: 20px 0;
+    width:fit-content;
+    font-weight: 500;
+    background-color: rgba(255,255,255,0.3) !important;
+    border-radius: 2rem;
+    border: 1px solid;
+    padding-inline: 20px;
+    transition: background-color 0.4s ease, border 0.3s ease;
+}
+.btn-danger:hover {
+    background-color: rgb(201, 10, 10) !important;
+    border: 1px solid rgb(201, 10, 10);
+}
+.btn-info {
+    color: white;
+    font-size: 0.8rem;
+    margin: 20px 0;
+    width:fit-content;
+    font-weight: 500;
+    background-color: rgba(255,255,255,0.3) !important;
+    border-radius: 2rem;
+    border: 1px solid;
+    padding-inline: 25px;
+    transition: background-color 0.4s ease, border 0.3s ease;  
+    --bs-btn-active-color: white;
+    --bs-btn-active-border-color: rgb(10, 201, 160);
+}
+.btn-info:hover {
+    color: white;
+    background-color: rgb(10, 201, 160) !important;
+    border: 1px solid rgb(10, 201, 160);
+}
+.card-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: auto;
+}
+.mapboxgl-canvas {
+    border-radius: 7%;
+}
+.card-img {
+    max-width: fit-content;
+    max-height: 600px;
+    border-radius: 3rem;
+}
+#campgroundCarousel {
+    max-width: 330px;
+    max-height: auto;
+}
+.main-title {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.main-text {
+    margin-top: 10px;
+}
+.list-group    {
+    --bs-list-group-bg: rgba(255, 255, 255, 0.01) !important;
+    --bs-list-group-color: white !important;
+    text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.9) !important;
+}
+.list-group-item:first-child {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.list-group {
+    --bs-list-group-border-color: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+}
+.btn-secondary {
+    font-size: 0.8rem;
+    font-weight: 700;       
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    border-radius: 2rem;
+    border: 1px solid;
+    width: fit-content;
+    text-decoration: none;
+    transition: color 0.3s ease, border 0.3s ease;
+    --bs-btn-active-border-color: rgba(255, 255, 255,0);
+
+}
+.card-footer {
+    text-align: center;
+}
+.pin5 {
+    width: 30px;
+    height: 40px;
+}
+.mapboxgl-popup-content {
+    width: fit-content;
+    height:70px;
+    border-radius: 40%;
+    background-color: rgba(255,255,255,0.6);
+    text-align: center;
+}
+.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
+    border-top-color: rgba(255,255,255,0.6);
+}
+.mapboxgl-popup-close-button {
+    display: none;
+}
+.map-title {
+    font-size: 0.8rem;
+    color: rgb(32, 32, 32);
+    text-shadow:  0.1rem 0.04rem rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.map-location {
+    font-size: 0.7rem;
+    color: rgb(32, 32, 32);
+    text-shadow:  0.1rem 0.04rem rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+}
+.alert-success {
+    --bs-alert-bg: rgba(14, 227, 14, 0.4);
+    max-width: 28%;
+    margin-left: auto;  
+    margin-right: auto;
+    color: white;
+    border-radius: 15px;
+    font-weight: 400;
+    text-align: center;
+}
+@media (max-width: 991px) {
+    #map {
+        width: 80% !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media(max-width: 768px) {
+   #map {
+    width: 90% !important;
+   }
+}
+
+@media (max-width: 991px) {
+    .col-lg-6 {
+        width: 100%;
+    }
+    .card {
+        text-align: center;
+    }
+    .submit-container {
+        text-align: center;
+    }
+    .card-review-sub {
+        text-align: start;
+    }
+}

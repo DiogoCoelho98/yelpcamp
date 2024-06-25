@@ -1,0 +1,57 @@
+html, body {
+    height: 100%;
+}
+body {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)),
+    url("https://images.unsplash.com/photo-1500332988905-1bf2a5733f63?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: center;
+    text-shadow: 0 0.05rem 0.1rem rgba(0,0,0,0.5);
+    background-attachment: fixed;
+}
+.alert-danger {
+    background-color: transparent !important;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    transition: color 0.3s ease, border 0.3s ease;
+    text-align: center;
+    color: white;
+    padding: 40px;
+}
+h4 {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 3rem;
+    font-weight: 500;
+    text-shadow: 0 0.05rem 0.1rem rgba(0,0,0,0.5);
+    margin-top: 20px;
+}
+.row p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-shadow: 0 0.05rem 0.1rem rgba(0,0,0,0.5);
+    margin-top: 20px;
+}
+button {
+    display: inline-block;
+    font-size: 1.3rem;
+    padding: 12px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 2rem;
+    border: 1px solid;
+    border-color: white;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease, border 0.3s ease; 
+    padding-inline: 15%;
+}
+button:hover {
+    border: 1px solid transparent;
+}
+.col-6 {
+    text-align: center;
+}
