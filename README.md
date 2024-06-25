@@ -19,7 +19,7 @@ YelpCamp is a web application that allows users to explore campgrounds around th
 ## Technologies Used
 ### Main Technologies
 - **Front End**: CSS, Bootstrap
-- **Back End**: MongoDB
+- **Back End**: MongoDB, Express, Mongoose
 - **Primary Language**: JavaScript
 
 ### Server and Routing
