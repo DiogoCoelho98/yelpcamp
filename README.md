@@ -1,7 +1,7 @@
 # YelpCamp
 
 ## Description
-YelpCamp is a web application that allows users to explore campground around the world. Users can view details of various campgrounds, including descriptions, photos, and reviews.
+YelpCamp is a web application that allows users to explore campgrounds around the world. Users can view details of various campgrounds, including descriptions, photos, and reviews.
 
 ## Features
 - **Browse through a list of campgrounds**
@@ -64,11 +64,11 @@ YelpCamp is a web application that allows users to explore campground around the
 - **paginationjs**
 
 ## Project Link
--**https://yelpcamp-uf2n.onrender.com/**
+**https://yelpcamp-uf2n.onrender.com/**
 
-##Contacts
--**https://www.linkedin.com/in/diogo-coelho-9360a9268/**
--**diogocoelho19988@gmail.com**
+## Contacts
+**https://www.linkedin.com/in/diogo-coelho-9360a9268/**
+**diogocoelho19988@gmail.com**
 
 
 
