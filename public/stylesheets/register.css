@@ -45,7 +45,8 @@ body {
 .btn-success {
     font-size: 1.1rem;
     margin-top: 20px;
-    width: 100px;
+    width: auto;
+    padding-inline: 70px;
     font-weight: 700;
     background-color: rgba(255,255,255,0.2) !important;
     border-radius: 2rem;
