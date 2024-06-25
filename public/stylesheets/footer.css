@@ -1,5 +1,6 @@
 footer {
-    margin-top: 20px;
+    margin-bottom: 0px !important;
+    margin-top: auto;
 }
 .icon-link {
     font-size: 30px;
