@@ -3,8 +3,7 @@
 ## Description
 YelpCamp is a web app designed for users to discover campgrounds worldwide. It offers comprehensive information about each campground, such as descriptions, photos, prices, and reviews. Additionally, users can create their own campgrounds and contribute reviews to existing ones.
 
-## Built with 
-
+## Built With 
 - <img src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" />
 - <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap icon" />
 - <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB icon" />
@@ -12,8 +11,7 @@ YelpCamp is a web app designed for users to discover campgrounds worldwide. It o
 - <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express icon" />
 - <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript icon" />
 
-## Decisions and some considerations
-
+## Decisions and some Considerations
 - I decided to use Cloudinary because it serves as a cornerstone for managing and optimizing images in a cloud-based environment. By leveraging Cloudinary's services, the application simplifies the upload, storage, transformation, and delivery of media assets. This capability is essential for efficiently handling user-generated content such as campground photos and ensuring optimal visual presentation.
 
 - For session management, connect-mongo was chosen to store session data persistently in MongoDB. This ensures seamless user sessions across server restarts or crashes, maintaining user authentication states and enhancing application reliability.
@@ -34,7 +32,7 @@ YelpCamp is a web app designed for users to discover campgrounds worldwide. It o
 
 - Passport is integrated for authentication middleware, supporting various authentication strategies such as OAuth and local username/password authentication. It enhances application security by managing user authentication and access control, ensuring secure user interactions and data protection. Passport-google-oauth20 simplifies Google OAuth 2.0 authentication integration. By leveraging Google's authentication service, it allows users to sign in securely using their Google accounts, enhancing user convenience and authentication security within the application. Passport-local and passport-local-mongoose provide authentication strategies for local username/password authentication. These packages streamline the implementation of user registration, login, and session management, ensuring secure access control and authentication processes.
 
-- These decisions were driven by the need to implement robust, scalable, and secure features while maintaining high performance and usability standards throughout the development of the application. Each npm package contributes uniquely to achieving these goals, ensuring a reliable and efficient application that meets both user expectations and industry standards.
+- These decisions were driven by the need to implement robust, scalable, and secure features while maintaining high performance and usability standards throughout the development of the application. Each npm package contributes uniquely to achieve these goals, ensuring a reliable and efficient application that meets both user expectations and industry standards.
 
 ## Features
 - **Browse through a list of campgrounds**
@@ -46,7 +44,11 @@ YelpCamp is a web app designed for users to discover campgrounds worldwide. It o
 - **User authentication with username/password and with Google**
 - **Responsiveness** for various devices
 - **Interactive map**
-  
+
+## Getting Started
+### Prerequisites
+- Node.js: Make sure Node.js is installed. You can download it from nodejs.org.   [OpenAI](https://www.openai.com)
+
 
 
 ## Project Link
