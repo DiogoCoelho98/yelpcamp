@@ -85,7 +85,7 @@ nodemon server.js
 ### Usage
 - Explore Campgrounds: Browse through various campgrounds, view details, photos, and reviews.
 - Add Campgrounds: Register and log in to create new campgrounds.
-- Leave Reviews: Share your experience by adding reviews to existing campgrounds.
+- Leave Reviews: Share your experience by adding reviews to existing campgrounds, or new ones.
 
 ## Project Link
 **https://yelpcamp-uf2n.onrender.com/**
