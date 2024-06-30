@@ -1,7 +1,21 @@
 # YelpCamp
 
 ## Description
-YelpCamp is a web application that allows users to explore campgrounds around the world. Users can view details of various campgrounds, including descriptions, photos, and reviews.
+YelpCamp is a web app designed for users to discover campgrounds worldwide. It offers comprehensive information about each campground, such as descriptions, photos, prices, and reviews. Additionally, users can create their own campgrounds and contribute reviews to existing ones.
+
+## Built with 
+
+### Front End
+- <img src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" alt="CSS icon" width="20px" height="20px"> CSS
+- <img src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" alt="Bootstrap icon" width="20px" height="20px"> Bootstrap
+
+### Back End
+- <img src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" alt="MongoDB icon" width="20px" height="20px"> MongoDB
+- <img src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" alt="Mongoose icon" width="20px" height="20px"> Mongoose
+- <img src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" alt="Express icon" width="20px" height="20px"> Express
+
+### Main Technologies
+- <img src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" alt="JavaScript icon" width="20px" height="20px"> JavaScript
 
 ## Features
 - **Browse through a list of campgrounds**
