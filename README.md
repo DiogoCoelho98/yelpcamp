@@ -40,12 +40,10 @@ YelpCamp is a web app designed for users to discover campgrounds worldwide. It o
 - **Browse through a list of campgrounds**
 - **View campground details** such as location, description, and images
 - **Add new campgrounds** (requires authentication)
-- **Edit existing campgrounds** (requires authorization)
-- **Delete campgrounds** (requires authorization)
-- **Add reviews and ratings** (requires authentication)
-- **User authentication with username and password**
-- **User authentication with Google**
+- **Edit/Delete existing campgrounds** (requires authorization)
+- **Add/Delete reviews and ratings** (requires authentication)
 - **User registration**
+- **User authentication with username/password and with Google**
 - **Responsiveness** for various devices
 - **Interactive map**
   
