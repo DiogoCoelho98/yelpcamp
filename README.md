@@ -52,7 +52,7 @@ YelpCamp is a web app designed for users to discover campgrounds worldwide. It o
 ### Installation
 ```
 git clone https://github.com/DiogoCoelho98/yelpcamp.git
-cd yelpcamp
+cd path/to/yelpcamp
 ```
 ```
 npm install
@@ -75,7 +75,10 @@ Create a `.env` file in the root directory of the project and add the following 
 ### Starting the Server
 1. Run the server
 ```
-npm start
+node server.js
+```
+```
+nodemon server.js
 ```
 2. View YelpCamp in your browser
 - Open your web browser and navigate to http://localhost:3000 (or another port you specified).
@@ -83,7 +86,7 @@ npm start
 - Explore Campgrounds: Browse through various campgrounds, view details, photos, and reviews.
 - Add Campgrounds: Register and log in to create new campgrounds.
 - Leave Reviews: Share your experience by adding reviews to existing campgrounds.
-- 
+
 ## Project Link
 **https://yelpcamp-uf2n.onrender.com/**
 
