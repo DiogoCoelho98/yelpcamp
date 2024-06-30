@@ -6,16 +6,16 @@ YelpCamp is a web app designed for users to discover campgrounds worldwide. It o
 ## Built with 
 
 ### Front End
-- <img src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" alt="CSS icon" width="20px" height="20px"> CSS
-- <img src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" alt="Bootstrap icon" width="20px" height="20px"> Bootstrap
+- <img src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" />
+- <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap icon" />
 
 ### Back End
-- <img src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" alt="MongoDB icon" width="20px" height="20px"> MongoDB
-- <img src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" alt="Mongoose icon" width="20px" height="20px"> Mongoose
-- <img src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" alt="Express icon" width="20px" height="20px"> Express
+- <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB icon" />
+- <img src="https://img.shields.io/badge/Mongoose-880000?style=for-the-badge&logo=mongoose&logoColor=white" alt="Mongoose icon" />
+- <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express icon" />
 
-### Main Technologies
-- <img src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" alt="JavaScript icon" width="20px" height="20px"> JavaScript
+### Main Technology
+- <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript icon" />
 
 ## Features
 - **Browse through a list of campgrounds**
