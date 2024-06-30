@@ -4,12 +4,12 @@
 YelpCamp is a web app designed for users to discover campgrounds worldwide. It offers comprehensive information about each campground, such as descriptions, photos, prices, and reviews. Additionally, users can create their own campgrounds and contribute reviews to existing ones.
 
 ## Built With 
-- <img src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" />
-- <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap icon" />
-- <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB icon" />
-- <img src="https://img.shields.io/badge/Mongoose-880000?style=for-the-badge&logo=mongoose&logoColor=white" alt="Mongoose icon" />
-- <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express icon" />
-- <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript icon" />
+ <img src="https://img.shields.io/badge/CSS1572B6?style=forthe-badge&logo=css3&logoColor=white" alt="CSS icon" />
+ <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap icon" />
+ <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB icon" />
+ <img src="https://img.shields.io/badge/Mongoose-880000?style=for-the-badge&logo=mongoose&logoColor=white" alt="Mongoose icon" />
+ <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express icon" />
+ <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript icon" />
 
 ## Decisions and some Considerations
 - I decided to use Cloudinary because it serves as a cornerstone for managing and optimizing images in a cloud-based environment. By leveraging Cloudinary's services, the application simplifies the upload, storage, transformation, and delivery of media assets. This capability is essential for efficiently handling user-generated content such as campground photos and ensuring optimal visual presentation.
@@ -50,18 +50,45 @@ YelpCamp is a web app designed for users to discover campgrounds worldwide. It o
 - Node.js: Make sure Node.js is installed. You can download it here [Node.js](https://nodejs.org/en)
 ### Installation
 ```
-git clone <repository-url>
+git clone https://github.com/DiogoCoelho98/yelpcamp.git
 cd yelpcamp
 ```
-
-
-
+```
+npm install
+```
+### Environment Variables
+Create a `.env` file in the root directory of the project and add the following environment variables:
+```
+- PORT=3000
+- MONGODB_URI=<your-mongodb-uri>
+- SESSION_SECRET=<your-session-secret>
+- CLOUDINARY_API_KEY=<your-cloudinary-api-key>
+- CLOUDINARY_API_SECRET=<your-cloudinary-api-secret>
+- GOOGLE_CLIENT_ID=<your-google-client-id>
+- GOOGLE_CLIENT_SECRET=<your-google-client-secret>
+- UNSPLASH_KEY=<your-unsplash-key>
+- MAPBOX_TOKEN=<your-mapbox-token>
+- CLOUDINARY_CLOUD_NAME=dcere2igx
+- UNSPLASH_COLLECTION=https://api.unsplash.com/collections/483251/photos
+```
+### Starting the Server
+1. Run the server
+```
+npm start
+```
+2. View YelpCamp in your browser
+- Open your web browser and navigate to http://localhost:3000 (or another port you specified).
+### Usage
+- Explore Campgrounds: Browse through various campgrounds, view details, photos, and reviews.
+- Add Campgrounds: Register and log in to create new campgrounds.
+- Leave Reviews: Share your experience by adding reviews to existing campgrounds.
+- 
 ## Project Link
 **https://yelpcamp-uf2n.onrender.com/**
 
 ## Contacts
-**https://www.linkedin.com/in/diogo-coelho-9360a9268/**
-**diogocoelho19988@gmail.com**
+- **https://www.linkedin.com/in/diogo-borges-coelho/**
+- **diogocoelho19988@gmail.com**
 
 
 
