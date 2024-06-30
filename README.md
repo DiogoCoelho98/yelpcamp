@@ -4,12 +4,13 @@
 YelpCamp is a web app designed for users to discover campgrounds worldwide. It offers comprehensive information about each campground, such as descriptions, photos, prices, and reviews. Additionally, users can create their own campgrounds and contribute reviews to existing ones.
 
 ## Built With 
- <img src="https://img.shields.io/badge/CSS1572B6?style=forthe-badge&logo=css3&logoColor=white" alt="CSS icon" />
+ <img src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" />
  <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap icon" />
  <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB icon" />
  <img src="https://img.shields.io/badge/Mongoose-880000?style=for-the-badge&logo=mongoose&logoColor=white" alt="Mongoose icon" />
  <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express icon" />
  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript icon" />
+ <img src="https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white" alt="Jest icon" />
 
 ## Decisions and some Considerations
 - I decided to use Cloudinary because it serves as a cornerstone for managing and optimizing images in a cloud-based environment. By leveraging Cloudinary's services, the application simplifies the upload, storage, transformation, and delivery of media assets. This capability is essential for efficiently handling user-generated content such as campground photos and ensuring optimal visual presentation.
