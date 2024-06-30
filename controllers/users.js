@@ -1,8 +1,6 @@
 const User = require('../models/user');
-const determineRedirectUrl = require('../middleware')
 
-//Users functionalities
-
+//Users controllers
 module.exports.renderRegisterForm = (req, res) => {
     res.render('users/register')
 };
@@ -17,18 +15,15 @@ module.exports.createUser = async (req, res) => {
     }
 
     try {
-        // Check if the email already exists
         const existingUserByEmail = await User.findOne({ email });
         if (existingUserByEmail) {
             req.flash('error', 'Email already registered. Please use a different email');
             return res.redirect('/register');
         }
 
-        // Create and register the user
         const user = new User({ username, email });
-        const registeredUser = await User.register(user, password); // Passport package handles password hashing and salting
+        const registeredUser = await User.register(user, password); // Passport package handles hash and salt
 
-        // Log in the user
         req.login(registeredUser, err => {
             if (err) return next(err);
             req.flash('success', 'Welcome to YelpCamp!');
@@ -44,7 +39,7 @@ module.exports.renderLoginForm = (req, res) => {
     res.render('users/login')
 };
 
-module.exports.loginUser = (req, res) => { //passport.authenticate makes sure that the user was logged in successfully
+module.exports.loginUser = (req, res) => { 
     req.flash('success', 'Welcome back!')
     const redirectUrl = res.locals.returnTo || '/campgrounds';
     delete req.session.returnTo
@@ -53,7 +48,7 @@ module.exports.loginUser = (req, res) => { //passport.authenticate makes sure th
 };
 
 module.exports.logoutUser = (req, res, next) => {
-    req.logout(function (err) { //method added by passport package
+    req.logout(function (err) {
         if (err) {
             return next(err);
         }

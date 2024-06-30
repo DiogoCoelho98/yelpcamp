@@ -5,9 +5,11 @@
 <div class="row">
     <div class="col-6 offset-3">
         <div class="alert alert-danger" role="alert">
+            <div class="heading-error">
             <h4 class="alert-heading">
                 <%= err.message %>
             </h4>
+        </div>
             <p>Status: <%= err.statusCode %></p>
             <div style="max-height: 300px; overflow-y: auto;">
                 <% if (process.env.NODE_ENV !== 'production') { %>
@@ -15,6 +17,8 @@
                 <% } %>
             </div>
         </div>
+        <div class="button-error">
         <a href="/"><button>Home</button></a>
+    </div>
     </div>
 </div>

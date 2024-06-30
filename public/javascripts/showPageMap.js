@@ -14,7 +14,6 @@ const el = document.createElement('div');
 el.className = 'pin5';
 el.style.backgroundImage = `url(${markerImgUrl})`;
 
-// Add marker to map
 new mapboxgl.Marker(el)
   .setLngLat(goodCampground.geometry.coordinates)
   .setPopup(

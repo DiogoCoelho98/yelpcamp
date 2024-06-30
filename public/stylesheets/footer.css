@@ -1,13 +1,16 @@
 footer {
     margin-bottom: 0px !important;
     margin-top: auto;
+
 }
 .icon-link {
     font-size: 30px;
     transition: color 0.3s, transform 0.3s; 
     margin-bottom: 10px;
 }
-
+p  {
+    margin-top: 10px;
+}
 .icon-link:hover {
     background-color: rgba();
     transform: scale(1.1); 

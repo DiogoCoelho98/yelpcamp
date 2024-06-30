@@ -8,10 +8,9 @@
 }
 
 .mapboxgl-popup-close-button {
-    display: none; /* Optionally hide the close button */
+    display: none; 
 }
 
-/* Customize link styles */
 .mapboxgl-popup-content a {
     color: #0078ff;
     text-decoration: none;
@@ -20,3 +19,4 @@
 .mapboxgl-popup-content a:hover {
     text-decoration: underline;
 }
+

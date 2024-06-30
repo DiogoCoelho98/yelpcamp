@@ -1,4 +1,4 @@
-const BaseJoi = require('joi'); // Validation on the server-side
+const BaseJoi = require('joi');
 const sanitizeHtml =  require('sanitize-html');
  
 //Sanitizing HTML,XSS
@@ -21,7 +21,7 @@ const extension = (joi) => ({
         }
     }
 });
-const Joi = BaseJoi.extend(extension); //execute extension
+const Joi = BaseJoi.extend(extension);
 
 module.exports.campgroundSchema = Joi.object({
     campground: Joi.object({

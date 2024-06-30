@@ -60,9 +60,10 @@ h1 {
 }
 .alert-success {
     --bs-alert-bg: rgba(14, 227, 14, 0.4);
-    max-width: 28%;
+    width: fit-content;
     margin-left: auto;  
     margin-right: auto;
+    padding-inline: 15%;
     color: white;
     border-radius: 15px;
     font-weight: 400;
@@ -71,5 +72,10 @@ h1 {
 @media(max-width: 1200px) {
     .campgrounds-container {
         text-align: center;
+    }
+}
+@media(max-width: 550px) {
+    .alert-success {
+        padding-inline: 25%;
     }
 }

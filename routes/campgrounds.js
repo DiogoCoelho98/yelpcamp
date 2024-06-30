@@ -1,18 +1,42 @@
 const express = require('express');
 const router = express.Router();
-const multer = require('multer'); //handles multipart/form-data, uploading files. Is configured to store uploaded files in the 'uploads/' directory.
-const { storage } = require('../cloudinary'); // dont need to complete the full path, because node automatically looks for an index.js file
+const multer = require('multer');
+const { storage } = require('../cloudinary');
 const upload = multer({ storage });
 const catchAsync = require('../utils/catchAsync');
 const campgrounds = require('../controllers/campgrounds');
 const { isLoggedIn, validateCampground, validateObjectId, isAuthor } = require('../middleware');
+const Campground = require('../models/campground')
 
-
-//Campground Routes
-
+//Campgrounds Routes
 router.route('/')
-    .get(catchAsync(campgrounds.index))
-    .post(isLoggedIn, upload.array('image'), validateCampground, catchAsync(campgrounds.createCampground));
+    .get(catchAsync(async (req, res, next) => {
+        const page = parseInt(req.query.page) || 1; 
+        const pageSize = 10; 
+        const skip = (page - 1) * pageSize;
+
+        try {
+            const totalCampgrounds = await Campground.countDocuments();
+            const campgrounds = await Campground.find()
+                .skip(skip)
+                .limit(pageSize);
+
+            res.render('campgrounds/index', {
+                campgrounds,
+                currentPage: page,
+                totalPages: Math.ceil(totalCampgrounds / pageSize)
+            });
+        } catch (err) {
+            next(err);
+        }
+    }))
+    .post(isLoggedIn, upload.array('image'), validateCampground, catchAsync(async (req, res, next) => {
+        try {
+            await campgrounds.createCampground(req, res);
+        } catch (err) {
+            next(err);
+        }
+    }));
 
 router.get('/new', isLoggedIn, campgrounds.newRenderForm);
 

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "\u001b[A\u001b[A"
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
@@ -32,7 +32,12 @@
     "passport-local-mongoose": "^8.0.0",
     "sanitize-html": "^2.13.0"
   },
-    "engines": {
-      "node": "18.13.0"
-    }
+  "engines": {
+    "node": "18.13.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "mongodb-memory-server": "^9.4.0",
+    "supertest": "^7.0.0"
+  }
 }

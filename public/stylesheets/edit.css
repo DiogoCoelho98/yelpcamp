@@ -9,6 +9,9 @@ body {
     background-position: center;
     background-attachment: fixed;
 }
+.container {
+    max-width: 65vw;
+}
 h1 {
     color: rgba(255, 255, 255, 1);
     letter-spacing: 1px;

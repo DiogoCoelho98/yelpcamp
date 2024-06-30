@@ -6,7 +6,7 @@ const Review = require('./models/review');
 
 
 //USER MIDDLEWARES
-
+//Middleware to check if the user is logged in
 module.exports.isLoggedIn = (req, res, next) => {
     if (!req.isAuthenticated()) {
         req.session.returnTo = req.originalUrl;
@@ -15,7 +15,7 @@ module.exports.isLoggedIn = (req, res, next) => {
     }
     next();
 }
-//Middleware to redirect the user to the page that tried to be accessed
+//Middleware to redirect the user
 module.exports.storeReturnTo = (req, res, next) => {
     if (req.session.returnTo) {
         res.locals.returnTo = req.session.returnTo;
@@ -23,10 +23,8 @@ module.exports.storeReturnTo = (req, res, next) => {
     next();
 }
 
-
 //CAMPGROUND MIDDLEWARES
-
-// Middleware to validate campground data in the request body using Joi schema.
+//Middleware to validate campground data in the request body, Joi schema
 module.exports.validateCampground = (req, res, next) => {
     const { error } = campgroundSchema.validate(req.body);
     if (error) {
@@ -57,12 +55,9 @@ module.exports.isAuthor = async (req, res, next) => {
     next()
 }
 
-
-
 //REVIEWS MIDDLEWARE
-
-//Middleware to validate the review
-module.exports.validateReview = (req, res, next) => { //Middleware to validate review req.body using Joi Schema
+//Middleware to validate the review req.body, Joi Schema
+module.exports.validateReview = (req, res, next) => { 
     const { error } = reviewSchema.validate(req.body)
     if (error) {
         const msg = error.details.map(element => element.message).join(',')
@@ -72,6 +67,7 @@ module.exports.validateReview = (req, res, next) => { //Middleware to validate r
     }
 };
 
+//Middleware to check the author of the review
 module.exports.isReviewAuthor = async (req, res, next) => {
     const { id, reviewId } = req.params
     const review = await Review.findById(reviewId)

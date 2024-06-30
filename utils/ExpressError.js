@@ -1,4 +1,4 @@
-class ExpressError extends Error { //Error it's a default class that Express provides
+class ExpressError extends Error {
     constructor(message, statusCode) {
         super();
         this.message = message;

@@ -1,74 +1,61 @@
-<% layout('layouts/boilerplate') %>
-<link crossorigin="anonymous" rel="stylesheet" href="/stylesheets/index.css">
+    <% layout('layouts/boilerplate') %>
+    <link crossorigin="anonymous" rel="stylesheet" href="/stylesheets/index.css">
+    
 
+    <div id="map" style="width: 100%; height: 500px; border-radius: 15px;"></div>
+    <h1>Campgrounds</h1>
+    <div class="add-container">
+        <a class="add-campground" href="/campgrounds/new">Add Campground</a>
+    </div>
 
-<div id="map" style="width: 100%; height: 500px; border-radius: 15px;"></div>
-<h1>Campgrounds</h1>
-<div  class="add-container">
-    <a class="add-campground" href="/campgrounds/new">Add Campground</a>
-</div>
-
-<div id="data-container">
-    <!-- Data will be dynamically populated by paginationjs -->
-</div>
-
-<div id="pagination-container"></div> <!-- This will hold the pagination links -->
-
-<script>
-    const mapToken = '<%- process.env.MAPBOX_TOKEN %>';
-    const campgrounds = { features: JSON.parse('<%-JSON.stringify(campgrounds)%>') };
-</script>
-<script crossorigin="anonymous" src="/javascripts/clusterMap.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.5/pagination.min.js"></script>
-<script>
-    $(document).ready(function() {
-    // Initialize pagination
-    $('#pagination-container').pagination({
-        dataSource: campgrounds.features,
-        pageSize: 10, //number of campgrounds per page
-        callback: function(data, pagination) {
-            // Clear existing data in data-container
-            $('#data-container').empty();
-
-            // Render campgrounds based on the current page
-            const html = data.map(campground => {
-                return `
-                    <div class="card mb-3">
-                        <div class="row">
-                            <div class="col-md-4">
-                                ${campground.images && campground.images.length > 0 ?
-                                    `<img crossorigin="anonymous" class="img-fluid card-img"
-                                     src="${campground.images[0].url}"
-                                     alt="Campground Image">` : ''
-                                }
-                            </div>
-                            <div class="col-md-8 view-campground-container">
-                                <div class="card-body">
-                                    <h5 class="card-title">${campground.title}</h5>
-                                    <p class="card-text">${campground.description}</p>
-                                    <p class="card-text card-location">${campground.location}</p>
-                                    <a href="/campgrounds/${campground._id}" class="btn btn-primary">
-                                        View Campground
-                                    </a>
-                                </div>
-                            </div>
+    <div id="data-container">
+        <% campgrounds.forEach(campground => { %>
+            <div class="card mb-3">
+                <div class="row">
+                    <div class="col-lg-4 img-container">
+                        <% if (campground.images && campground.images.length > 0) { %>
+                            <img crossorigin="anonymous" class="img-fluid card-img"
+                                src="<%= campground.images[0].url %>"
+                                alt="Campground Image">
+                        <% } %>
+                    </div>
+                    <div class="col-lg-8 view-campground-container">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= campground.title %></h5>
+                            <p class="card-text"><%= campground.description %></p>
+                            <p class="card-text card-location"><%= campground.location %></p>
+                            <a href="/campgrounds/<%= campground._id %>" class="btn btn-primary">
+                                View Campground
+                            </a>
                         </div>
                     </div>
-                `;
-            }).join('');
-            
-            $('#data-container').html(html);
+                </div>
+            </div>
+        <% }); %>
+    </div>
 
-            // Check if pagination is not on the first page
-            if (pagination.pageNumber > 1) {
-    if (window.matchMedia("(max-width: 780px)").matches) {
-        window.scrollTo({ top: 100, behavior: 'smooth' });
-    } else {
-        window.scrollTo({ top: 650, behavior: 'smooth' });
-    }
-}
-        }
-    });
-});
-</script>
+    <div id="pagination-container">
+        <% if (totalPages > 1) { %>
+            <ul class="pagination">
+                <% for (let i = 1; i <= totalPages; i++) { %>
+                    <li class="page-item <%= i === currentPage ? 'active' : '' %>">
+                        <a class="page-link" href="/campgrounds?page=<%= i %>"><%= i %></a>
+                    </li>
+                <% } %>
+            </ul>
+        <% } %>
+    </div>
+
+    <script>
+        const mapToken = '<%- process.env.MAPBOX_TOKEN %>';
+        const campgrounds = { features: JSON.parse('<%- JSON.stringify(campgrounds) %>') };
+    </script>
+
+    <script crossorigin="anonymous" src="/javascripts/clusterMap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.5/pagination.min.js"></script>
+
+    
+    
+
+    

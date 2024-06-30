@@ -1,9 +1,6 @@
 html, body {
     height: 100%;
 }
-.loginContainer {
-margin-top: 8%;
-}
 body {
     height: 100vh;
     background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
@@ -11,6 +8,9 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+}
+.container {
+    max-width: 65vw;
 }
 h1 {
     color: rgba(255, 255, 255, 1);
@@ -73,57 +73,58 @@ h1 {
 .btn-primary:hover {
     border: 1px solid transparent;
 }
+.img-container {
+    margin-top: auto;
+    margin-bottom: auto;
+}
 .card-img {
-    max-width: fit-content;
-    max-height: 600px;
+    object-fit: cover;
+    object-position: bottom;
+    width: 100%;
+    max-height: 250px;
     border-radius: 3rem;
 }
-.paginationjs {
-    align-items: center;
+#pagination-container {
+    text-align: center;
     margin-top: 20px;
 }
 
-.paginationjs-pages {
+.pagination {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
 }
-.paginationjs-pages ul {
-    display: flex;
-    list-style-type: none;
-}
-.paginationjs-page,
-.paginationjs-prev,
-.paginationjs-next {
+
+.pagination .page-item {
     margin: 5px 2px;
+}
+
+.pagination .page-link {
+    display: inline-block;
     padding: 5px 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    cursor: pointer;    
+    cursor: pointer;
     text-align: center;
-    width: fit-content;
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(255, 255, 255, 0.3);
     color: white;
-    text-shadow: 0 0.05rem 0.1rem rgba(0,0,0,0.7);
+    text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.7);
     text-decoration: none;
     outline: none;
 }
-.paginationjs-page:hover,
-.paginationjs-prev:hover,
-.paginationjs-next:hover {
-    background-color: rgba(255,255,255,0.6);
-    color: white;
+
+.pagination .page-link:hover {
+    background-color: rgba(255, 255, 255, 0.6);
 }
-.paginationjs-page.active,
-.paginationjs-prev.active,
-.paginationjs-next.active {
-    background-color: rgba(255,255,255,0.6);
-    color: white;
+
+.pagination .page-item.active .page-link {
+    background-color: rgba(255, 255, 255, 0.6);
 }
-.paginationjs-page a,
-.paginationjs-prev a,
-.paginationjs-next a {
+
+.pagination .page-link,
+.pagination .page-item.active .page-link {
+    color: white;
     text-decoration: none;
-    color: white;
 }
 .mapboxgl-popup {
     max-width: 300px;
@@ -153,9 +154,10 @@ h1 {
 }
 .alert-success {
     --bs-alert-bg: rgba(14, 227, 14, 0.4);
-    max-width: 28%;
+    width: fit-content;
     margin-left: auto;  
     margin-right: auto;
+    padding-inline: 15%;
     color: white;
     border-radius: 15px;
     font-weight: 400;
@@ -163,18 +165,16 @@ h1 {
 }
 .alert-danger {
     --bs-alert-bg: rgba(243, 7, 7, 0.4);
-    max-width: 28%;
+    width: fit-content;
     margin-left: auto;
     margin-right: auto;
+    padding-inline: 15%;
     color: white;
     border-radius: 15px;
     font-weight: 400;
     text-align: center;
 }
-@media(max-width: 780px) {
-    #map {
-        display: none;
-    }
+@media(max-width:991px) {
     .add-container {
         text-align: center;
     }
@@ -184,10 +184,36 @@ h1 {
     .btn-primary {
         margin-right: auto;
     }
-    .paginationjs-pages {
-        align-items: center;
+}
+@media (max-width: 991px) and (min-width: 800px) {
+    .card-img {
+        width: 80%;
+        height: auto;
     }
 }
+
+@media(max-width: 780px) {
+    #map {
+        display: none;
+    }
+}
+@media(max-width: 650px){
+    h1 {
+        font-size: 2rem;
+    }
+    .add-campground {
+        font-size: 0.8rem;
+    }
+}
+@media(max-width: 550px) {
+    .alert-success {
+        padding-inline: 25%;
+    }
+    .alert-danger {
+        padding-inline: 25%;
+    }
+}
+
 
 
 

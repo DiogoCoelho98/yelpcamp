@@ -2,7 +2,7 @@ html, body {
     height: 100%;
 }
 .loginContainer {
-margin-top: 8%;
+margin-top: 5%;
 }
 body {
     height: 100vh;
@@ -12,10 +12,13 @@ body {
     background-position: center;
     background-attachment: fixed;
 }
+.container {
+    max-width: 65vw;
+}
 .card {
     background-color: rgba(255, 255, 255, 0.15);
-    width: 400px;
-    height: 500px;
+    width: fit-content;
+    height: auto;
     padding: 20px;
     border-radius: 50px;
 }
@@ -64,9 +67,10 @@ body {
 }
 .alert-danger {
     --bs-alert-bg: rgba(243, 7, 7, 0.4);
-    max-width: 28%;
+    width: fit-content;;
     margin-left: auto;
     margin-right: auto;
+    padding-inline: 15%;
     color: white;
     border-radius: 15px;
     font-weight: 400;
@@ -84,5 +88,34 @@ body {
 .material-icons:hover {
     color: rgba(255, 255, 255, 0.8)
 }
+.row>* {
+    width: fit-content;
+    max-width: fit-content !important;
+}
+@media (min-width: 992px) {
+    .col-lg-4 {
+        flex: 0 0 auto;
+        width: fit-content;
+    }
+}
+@media (min-width: 768px) {
+    .col-md-6 {
+        flex: 0 0 auto;
+        width: fit-content;
+    }
+}
+@media (min-width: 576px) {
+    .col-sm-8 {
+        flex: 0 0 auto;
+        width: fit-content;
+    }
+}
+@media(max-width: 550px) {
+    .alert-danger {
+        padding-inline: 25%;
+    }
+}
+
+
 
 

@@ -6,7 +6,6 @@ const { storeReturnTo } = require('../middleware');
 const passport = require('passport');
 
 //User Routes
-
 router.route('/register')
     .get(users.renderRegisterForm)
     .post(catchAsync(users.createUser));

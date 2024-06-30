@@ -1,3 +1,4 @@
+require('dotenv').config({ path: '../.env' })
 const mongoose = require('mongoose');
 const cities = require('./cities')
 const { places, descriptors } = require('./seedHelper')
@@ -16,12 +17,12 @@ db.once('open', () => {
 const sample = array => array[Math.floor(Math.random() * array.length)];
 
 const fetchUnsplashImages = async () => {
-    const response = await axios.get('https://api.unsplash.com/collections/483251/photos', {
+    const response = await axios.get(process.env.UNSPLASH_COLLECTION, {
         headers: {
-            Authorization: 'Client-ID _Xp0RkcW2ZWMqcpKvRONS9Td94G6WGFWEgpGZrFSFOo' // Access Key
+            Authorization: `Client-ID ${process.env.UNSPLASH_KEY}`
         },
         params: {
-            per_page: 50 // images to fetch
+            per_page: 50
         }
     });
     return response.data.map(photo => ({
@@ -37,7 +38,7 @@ const seedDB = async () => {
     for (let i = 0; i < 50; i++) {
         const random1000 = Math.floor(Math.random() * 1000);
         const price = Math.floor(Math.random() * 20) + 10;
-        const numImages = Math.floor(Math.random() * 3) + 1; // Randomly choose 1 to 3 images per camp
+        const numImages = Math.floor(Math.random() * 3) + 1;
 
         const campImages = [];
         for (let j = 0; j < numImages; j++) {
@@ -45,7 +46,7 @@ const seedDB = async () => {
         }
 
         const camp = new Campground({
-            author: '6671edb4cb61931853570863',
+            author: '668128dd5f2e2b68d2ac5609',
             location: `${cities[random1000].city}, ${cities[random1000].state}`,
             title: `${sample(descriptors)} ${sample(places)}`,
             images: campImages,
@@ -64,5 +65,5 @@ const seedDB = async () => {
 };
 
 seedDB().then(() => {
-    mongoose.connection.close() //This closes the server
+    mongoose.connection.close()
 });
