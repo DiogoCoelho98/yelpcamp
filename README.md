@@ -47,7 +47,7 @@ YelpCamp is a web app designed for users to discover campgrounds worldwide. It o
 
 ## Getting Started
 ### Prerequisites
-- Node.js: Make sure Node.js is installed. You can download it from nodejs.org.   [OpenAI](https://www.openai.com)
+- Node.js: Make sure Node.js is installed. You can download [Node.js](https://nodejs.org/en)
 
 
 
