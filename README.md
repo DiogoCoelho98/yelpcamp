@@ -1,7 +1,7 @@
 # YelpCamp
 
 ## Description
-YelpCamp is a web app designed for users to discover campgrounds worldwide. It offers comprehensive information about each campground, such as descriptions, photos, prices, and reviews. Additionally, users can create their own campgrounds and contribute reviews to existing ones.
+YelpCamp is a web app designed for users to discover campgrounds worldwide. It offers comprehensive information about each campground, such as descriptions, photos, prices, and reviews. Additionally, users can create their own campgrounds and contribute with reviews.
 
 ## Built With 
  <img src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS icon" />
