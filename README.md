@@ -14,6 +14,8 @@ YelpCamp is a web app designed for users to discover campgrounds worldwide. It o
 
 ## Decisions and some Considerations
 - I decided to use Cloudinary because it serves as a cornerstone for managing and optimizing images in a cloud-based environment. By leveraging Cloudinary's services, the application simplifies the upload, storage, transformation, and delivery of media assets. This capability is essential for efficiently handling user-generated content such as campground photos and ensuring optimal visual presentation.
+  
+- Multer and multer-storage-cloudinary are crucial for handling file uploads within the application. Multer provides middleware for processing multipart/form-data, while multer-storage-cloudinary integrates Multer with Cloudinary for seamless upload and storage of files in the cloud. This setup streamlines file management processes and enhances scalability by offloading storage to a cloud-based service.
 
 - For session management, connect-mongo was chosen to store session data persistently in MongoDB. This ensures seamless user sessions across server restarts or crashes, maintaining user authentication states and enhancing application reliability.
 
@@ -26,8 +28,6 @@ YelpCamp is a web app designed for users to discover campgrounds worldwide. It o
 - Sanitize-html is employed for sanitizing HTML input to prevent XSS attacks. It enables safe HTML formatting and content rendering while removing potentially malicious scripts or code, ensuring that user-generated content is displayed safely within the application.
 
 - Method-override facilitates RESTful API practices by enabling the use of HTTP methods such as PUT and DELETE in web applications that only support GET and POST natively. This middleware enhances API flexibility and adherence to REST principles, improving overall API design and functionality.
-
-- Multer and multer-storage-cloudinary are crucial for handling file uploads within the application. Multer provides middleware for processing multipart/form-data, while multer-storage-cloudinary integrates Multer with Cloudinary for seamless upload and storage of files in the cloud. This setup streamlines file management processes and enhances scalability by offloading storage to a cloud-based service.
 
 - Paginationjs is utilized for client-side pagination in jQuery and JavaScript. It simplifies the implementation of pagination functionality for managing large datasets, enhancing user experience by dividing data into manageable pages without additional server-side rendering.
 
