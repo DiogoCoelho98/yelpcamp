@@ -30,8 +30,10 @@ YelpCamp is a web app designed for users to discover campgrounds worldwide. It o
 - Method-override facilitates RESTful API practices by enabling the use of HTTP methods such as PUT and DELETE in web applications that only support GET and POST natively. This middleware enhances API flexibility and adherence to REST principles, improving overall API design and functionality.
 
 - Paginationjs is utilized for client-side pagination in jQuery and JavaScript. It simplifies the implementation of pagination functionality for managing large datasets, enhancing user experience by dividing data into manageable pages without additional server-side rendering.
-
+  
 - Passport is integrated for authentication middleware, supporting various authentication strategies such as OAuth and local username/password authentication. It enhances application security by managing user authentication and access control, ensuring secure user interactions and data protection. Passport-google-oauth20 simplifies Google OAuth 2.0 authentication integration. By leveraging Google's authentication service, it allows users to sign in securely using their Google accounts, enhancing user convenience and authentication security within the application. Passport-local and passport-local-mongoose provide authentication strategies for local username/password authentication. These packages streamline the implementation of user registration, login, and session management, ensuring secure access control and authentication processes.
+
+- Jest was selected for its robust testing capabilities tailored for Node.js applications. It supports unit, integration, and snapshot testing with efficient parallel execution and built-in mocking features. Jest's streamlined setup and comprehensive tools ensure thorough testing, validating functionality and maintaining high code quality throughout development.
 
 - These decisions were driven by the need to implement robust, scalable, and secure features while maintaining high performance and usability standards throughout the development of the application. Each npm package contributes uniquely to achieve these goals, ensuring a reliable and efficient application that meets both user expectations and industry standards.
 
